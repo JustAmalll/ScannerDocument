@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Scanner Document</string>
+    <string name="app_logo">App Logo</string>
+    <string name="icon_search">Icon Search</string>
+    <string name="icon_premium">Icon Premium</string>
+    <string name="storage">Хранилище</string>
+    <string name="icon_cloud">Icon Cloud</string>
+    <string name="more_space">Больше места</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="icon_add">Icon Add</string>
+    <string name="icon_scan">Icon Scan</string>
+    <string name="smart_scan">Умное\n сканирование</string>
+    <string name="pdf_tools">Инструменты\n PDF</string>
+    <string name="import_image">Импорт\n изображения</string>
+    <string name="import_file">Импорт\n файлов</string>
+    <string name="scan_document">Сканировать\n ID-документ</string>
+    <string name="image_to_text">Изображение\n в текст</string>
+    <string name="improved_portrait">Улучш.\n портрет</string>
+    <string name="all">Все</string>
+    <string name="last_documents">Последние документы</string>
+    <string name="icon_file">Icon File</string>
+    <string name="empty_list_text">Недавних файлов нет</string>
+    <string name="info_text">5 Мб из 300 Мб использовано</string>
+    <string name="files">Файлы</string>
+    <string name="tools">Инструменты</string>
+    <string name="profile">Профиль</string>
+    <string name="home">Домой</string>
+    <string name="button_scan">Button Scan</string>
+    <string name="scan_new_documents">Сканировать новые документы</string>
+    <string name="titile">Задание 1 - экраны системы измеряющей диапазон наклон...</string>
+    <string name="date">09.07.22 11:50</string>
+    <string name="_24">24</string>
+    <string name="document_preview">Document Preview</string>
+    <string name="note">Заметка</string>
+    <string name="cutaway">Визитка</string>
+    <string name="ppt">PPT</string>
+</resources>
