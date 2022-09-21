@@ -4,8 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/JustAmal/Documents/ScannerDocument/app/src/main/res/drawable/bottom_bar_items_style.xml" value="0.321" />
+        <entry key="..\:/Users/JustAmal/Documents/ScannerDocument/app/src/main/res/drawable/fab_gradient.xml" value="0.321" />
+        <entry key="..\:/Users/JustAmal/Documents/ScannerDocument/app/src/main/res/drawable/fab_gradient_bg.xml" value="0.321" />
+        <entry key="..\:/Users/JustAmal/Documents/ScannerDocument/app/src/main/res/drawable/ic_add.xml" value="0.235" />
         <entry key="..\:/Users/JustAmal/Documents/ScannerDocument/app/src/main/res/drawable/ic_home.xml" value="0.321" />
         <entry key="..\:/Users/JustAmal/Documents/ScannerDocument/app/src/main/res/drawable/ic_premium.xml" value="0.321" />
+        <entry key="..\:/Users/JustAmal/Documents/ScannerDocument/app/src/main/res/drawable/ic_scan.xml" value="0.235" />
         <entry key="..\:/Users/JustAmal/Documents/ScannerDocument/app/src/main/res/drawable/ic_tools.xml" value="0.321" />
         <entry key="..\:/Users/JustAmal/Documents/ScannerDocument/app/src/main/res/drawable/ic_user.xml" value="0.321" />
         <entry key="..\:/Users/JustAmal/Documents/ScannerDocument/app/src/main/res/drawable/image_view_border.xml" value="0.321" />
@@ -13,7 +17,7 @@
         <entry key="..\:/Users/JustAmal/Documents/ScannerDocument/app/src/main/res/drawable/outline_button.xml" value="0.321" />
         <entry key="..\:/Users/JustAmal/Documents/ScannerDocument/app/src/main/res/drawable/text_view_bg_style.xml" value="0.321" />
         <entry key="..\:/Users/JustAmal/Documents/ScannerDocument/app/src/main/res/layout/activity_main.xml" value="0.4241128687473279" />
-        <entry key="..\:/Users/JustAmal/Documents/ScannerDocument/app/src/main/res/layout/home_screen.xml" value="0.33" />
+        <entry key="..\:/Users/JustAmal/Documents/ScannerDocument/app/src/main/res/layout/home_screen.xml" value="0.67" />
         <entry key="..\:/Users/JustAmal/Documents/ScannerDocument/app/src/main/res/layout/splash_screen.xml" value="0.41733277240218764" />
         <entry key="..\:/Users/JustAmal/Documents/ScannerDocument/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
       </map>
