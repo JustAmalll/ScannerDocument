@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".fragments.OpenPhotoFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|start">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/ic_close"
+                    android:contentDescription="@string/icon_close" />
+
+                <TextView
+                    style="@style/DefaultToolbarTitle"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="8dp"
+                    android:text="@string/_5_2646" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/importButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:text="@string/import_1"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:cornerRadius="8dp" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/document_image"
+            android:src="@drawable/image5" />
+
+        <View
+            android:layout_width="344dp"
+            android:layout_height="464dp"
+            android:alpha="0.5"
+            android:background="@color/primary" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_check_circle_white"
+            android:contentDescription="@string/check_circle_white_icon" />
+
+    </androidx.cardview.widget.CardView>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_blue"
+        android:paddingBottom="26dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_blue"
+            android:paddingVertical="4dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="88dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                app:cardCornerRadius="8dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image3"
+                    android:contentDescription="@string/document_image" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@string/icon_remove"
+                    android:src="@drawable/ic_delete" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="88dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="8dp"
+                app:cardCornerRadius="8dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image3"
+                    android:contentDescription="@string/document_image"/>
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:contentDescription="@string/icon_remove"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/ic_delete" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="88dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="8dp"
+                app:cardCornerRadius="8dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image3"
+                    android:contentDescription="@string/document_image"/>
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:contentDescription="@string/icon_remove"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/ic_delete" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="88dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="8dp"
+                app:cardCornerRadius="8dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image3"
+                    android:contentDescription="@string/document_image"/>
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:contentDescription="@string/icon_remove"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/ic_delete" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="88dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="8dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image3"
+                    android:contentDescription="@string/document_image"/>
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:contentDescription="@string/icon_remove"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/ic_delete" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

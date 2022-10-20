@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:paddingVertical="12dp">
+
+    <ImageView
+        android:id="@+id/iv_folder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:contentDescription="@string/blue_folder_image"
+        android:src="@drawable/ic_folder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_doc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:ellipsize="end"
+        android:maxEms="12"
+        android:maxLines="1"
+        android:textColor="@color/text_color"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_folder"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Новая папка 09.07.22" />
+
+    <ImageView
+        android:id="@+id/iv_file"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/small_file_image"
+        android:src="@drawable/ic_file"
+        app:layout_constraintStart_toEndOf="@+id/iv_folder"
+        app:layout_constraintTop_toBottomOf="@+id/tv_doc" />
+
+    <TextView
+        android:id="@+id/tv_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/light_grey"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_file"
+        app:layout_constraintStart_toEndOf="@+id/iv_file"
+        app:layout_constraintTop_toBottomOf="@+id/tv_doc"
+        tools:text="6" />
+
+    <ImageButton
+        android:id="@+id/ib_three_dots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@null"
+        android:contentDescription="@string/more_icon"
+        android:src="@drawable/ic_more"
+        app:tint="@color/light_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

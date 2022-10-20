@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/copy"
+        android:icon="@drawable/ic_copy"
+        android:title="@string/copy" />
+
+    <item
+        android:id="@+id/exportBottomSheetDialogFragment"
+        android:icon="@drawable/ic_export"
+        android:title="@string/export" />
+
+    <item
+        android:id="@+id/recognizeDialogFragment"
+        android:icon="@drawable/ic_identify"
+        android:title="@string/recognize" />
+
+    <item
+        android:id="@+id/translateFragment"
+        android:icon="@drawable/ic_translation"
+        android:title="@string/translate" />
+
+</menu>

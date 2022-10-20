@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/f_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.08"
+        android:background="@color/primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="6dp"
+            android:contentDescription="@string/icon_arrow_left_icon"
+            android:gravity="start"
+            android:src="@drawable/ic_blue_back_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_add_new_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/backButton"
+            android:layout_marginStart="24dp"
+            android:text="@string/tags"
+            android:textColor="@color/text_color"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/backButton"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            app:layout_constraintTop_toTopOf="@+id/backButton" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/pencil_icon"
+            android:src="@drawable/ic_pencil"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_add_new_tag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_add_new_tag" />
+
+        <TextView
+            android:id="@+id/tv_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/all"
+            android:textColor="@color/text_color"
+            app:layout_constraintStart_toStartOf="@+id/backButton"
+            app:layout_constraintTop_toBottomOf="@+id/backButton" />
+
+        <TextView
+            android:id="@+id/tv_count_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="@string/_9"
+            android:textColor="@color/text_color"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_all"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_all" />
+
+        <TextView
+            android:id="@+id/tv_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/other"
+            android:textColor="@color/text_color"
+            app:layout_constraintStart_toStartOf="@+id/tv_all"
+            app:layout_constraintTop_toBottomOf="@+id/tv_all" />
+
+        <TextView
+            android:id="@+id/tv_count_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="@string/_9"
+            android:textColor="@color/text_color"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_other"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_other" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:paddingVertical="4dp"
+        android:text="@string/i"
+        android:textColor="@color/light_grey"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_top" />
+
+    <RelativeLayout
+        android:id="@+id/relative_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingVertical="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_id">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="24dp"
+            android:gravity="start"
+            android:text="@string/id"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="36dp"
+            android:text="@string/_2"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_ppt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:paddingVertical="4dp"
+        android:text="@string/p"
+        android:textColor="@color/light_grey"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relative_id" />
+
+    <RelativeLayout
+        android:id="@+id/relative_ppt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingVertical="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ppt">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="24dp"
+            android:gravity="start"
+            android:text="@string/ppt"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="36dp"
+            android:text="@string/_2"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:paddingVertical="4dp"
+        android:text="@string/w"
+        android:textColor="@color/light_grey"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relative_ppt" />
+
+    <RelativeLayout
+        android:id="@+id/relative_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingVertical="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_word">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="24dp"
+            android:gravity="start"
+            android:text="@string/word"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="36dp"
+            android:text="@string/_2"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_visa_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:paddingVertical="4dp"
+        android:text="@string/ru_v"
+        android:textColor="@color/light_grey"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relative_word" />
+
+    <RelativeLayout
+        android:id="@+id/relative_visa_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingVertical="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_visa_card">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="24dp"
+            android:gravity="start"
+            android:text="@string/visa_card"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="36dp"
+            android:text="@string/_2"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_task_board"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:paddingVertical="4dp"
+        android:text="@string/ru_d"
+        android:textColor="@color/light_grey"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relative_visa_card" />
+
+    <RelativeLayout
+        android:id="@+id/relative_task_board"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingVertical="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_task_board">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="24dp"
+            android:gravity="start"
+            android:text="@string/notes_board"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            tools:ignore="RelativeOverlap" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="36dp"
+            android:text="@string/_2"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:paddingVertical="4dp"
+        android:text="@string/ru_z"
+        android:textColor="@color/light_grey"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relative_task_board" />
+
+    <RelativeLayout
+        android:id="@+id/relative_notes"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:background="@color/white"
+        android:paddingVertical="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_notes">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="24dp"
+            android:gravity="start"
+            android:text="@string/note"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="36dp"
+            android:text="@string/_2"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

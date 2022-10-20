@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_corners"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_in_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+        <ImageView
+            android:id="@+id/iv_import_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/icon_picture"
+            android:src="@drawable/ic_picture"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_import_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:paddingVertical="4dp"
+            android:text="@string/import_image2"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_import_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_import_image"
+            app:layout_constraintTop_toTopOf="@+id/iv_import_image" />
+
+        <ImageView
+            android:id="@+id/iv_import_files"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="26sp"
+            android:contentDescription="@string/a_sheet_with_an_arrow_up_forwarded"
+            android:src="@drawable/ic_import_file"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_import_image" />
+
+        <TextView
+            android:id="@+id/tv_import_files"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:paddingVertical="4dp"
+            android:text="@string/import_file2"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_import_files"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_import_files"
+            app:layout_constraintTop_toTopOf="@+id/iv_import_files" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

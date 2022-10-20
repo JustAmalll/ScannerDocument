@@ -1,0 +1,223 @@
+[33mcommit 63798b3899c2033fe087442dca239ad2f5e47a2b[m[33m ([m[1;36mHEAD -> [m[1;32mosr_bottom_sheet[m[33m, [m[1;31morigin/osr_bottom_sheet[m[33m)[m
+Author: Just_Amalll <amalkrasavchik@gmail.com>
+Date:   Thu Sep 29 23:08:34 2022 +0600
+
+    Osr Bottom Sheet has been added
+
+[33mcommit 388da2a78f3669001e5ce8d23e019ec9bf6ca321[m[33m ([m[1;31morigin/translate_screen[m[33m, [m[1;32mtranslate_screen[m[33m)[m
+Author: Just_Amalll <amalkrasavchik@gmail.com>
+Date:   Thu Sep 29 22:42:39 2022 +0600
+
+    Translate Screen has been added
+
+[33mcommit aadcadd66d6b84cb4ec3a3e8ee9973415c1b2a90[m[33m ([m[1;31morigin/amal_task[m[33m, [m[1;32mamal_task[m[33m)[m
+Author: Just_Amalll <amalkrasavchik@gmail.com>
+Date:   Thu Sep 29 20:57:10 2022 +0600
+
+    More screens has been added
+
+[33mcommit cf9a1cc08d0eeb78d3bbb32694cc432c62684711[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Merge: fef765e b94a177
+Author: AdiLhan1 <kelsinbekovadilhan2018@gmail.com>
+Date:   Wed Sep 28 14:30:22 2022 +0000
+
+    Merge branch 'photo_menu' into 'main'
+    
+    Добавлены экраны меню фото
+    
+    See merge request AdiLhan1/docapp!12
+
+[33mcommit b94a177529f6f5a43024629527f5092a622becee[m
+Author: Amal Nuritdinkhodzhaev <dev.justamal@gmail.com>
+Date:   Wed Sep 28 14:30:22 2022 +0000
+
+    Добавлены экраны меню фото
+
+[33mcommit fef765e82b689076f0b60b49703775181852415b[m
+Author: AdiLhan1 <kelsinbekovadilhan2018@gmail.com>
+Date:   Wed Sep 28 16:15:43 2022 +0600
+
+    added new screens
+    refactored code
+
+[33mcommit 59b9fb097ae58d3f97ce646c87c288c22d1449d9[m
+Merge: 3a08227 00a51b3
+Author: AdiLhan1 <kelsinbekovadilhan2018@gmail.com>
+Date:   Wed Sep 28 15:01:48 2022 +0600
+
+    Merge branch 'thed' of https://gitlab.com/AdiLhan1/docapp
+    
+     Conflicts:
+    	app/src/main/res/drawable-v24/ic_settings.xml
+    	app/src/main/res/layout/activity_main.xml
+    	app/src/main/res/layout/fragment_main.xml
+    	app/src/main/res/layout/item_documents.xml
+    	app/src/main/res/layout/items.xml
+    	app/src/main/res/values/colors.xml
+    	app/src/main/res/values/strings.xml
+    	local.properties
+
+[33mcommit 3a0822738ab9750aba1c10e1a2d7955ed436235d[m
+Author: AdiLhan1 <kelsinbekovadilhan2018@gmail.com>
+Date:   Wed Sep 28 14:58:26 2022 +0600
+
+    updated
+
+[33mcommit 00a51b349fa009fcb27ec7ee7a6d0f6e71f99e30[m
+Author: User <theddy.kg@gmail.com>
+Date:   Wed Sep 28 14:34:29 2022 +0600
+
+    Commit 24 layouts
+
+[33mcommit cc0eb8cfc5ba09cd29179b322d26f3e279252c99[m
+Merge: ed2ddd4 0057206
+Author: AdiLhan1 <kelsinbekovadilhan2018@gmail.com>
+Date:   Wed Sep 28 06:54:47 2022 +0000
+
+    Merge branch 'profile_screens' into 'main'
+    
+    Сделаны все экраны профиля
+    
+    See merge request AdiLhan1/docapp!10
+
+[33mcommit 0057206d43f101c1756c7245cf672e52552f0de4[m
+Author: Amal Nuritdinkhodzhaev <dev.justamal@gmail.com>
+Date:   Wed Sep 28 06:54:47 2022 +0000
+
+    Сделаны все экраны профиля
+
+[33mcommit ed2ddd4fd33503e31511db1f4423502776059a01[m
+Merge: 9df8dcc afdee03
+Author: AdiLhan1 <kelsinbekovadilhan2018@gmail.com>
+Date:   Wed Sep 28 05:45:42 2022 +0000
+
+    Merge branch 'scan_sync_screens' into 'main'
+    
+    Добавлены экраны синхронизации и сканирования
+    
+    See merge request AdiLhan1/docapp!7
+
+[33mcommit afdee031d0ae91348d6f695bdfd9ef8688b8c97c[m
+Author: Amal Nuritdinkhodzhaev <dev.justamal@gmail.com>
+Date:   Wed Sep 28 05:45:42 2022 +0000
+
+    Добавлены экраны синхронизации и сканирования
+
+[33mcommit 9df8dcc0527378c4cab4692737d244089f7b7524[m[33m ([m[1;31morigin/nurkhan[m[33m)[m
+Merge: 8a4a584 3bbf345
+Author: AdiLhan1 <kelsinbekovadilhan2018@gmail.com>
+Date:   Tue Sep 27 12:45:14 2022 +0000
+
+    Merge branch 'profile_screen' into 'main'
+    
+    Добавлены экраны профиля
+    
+    See merge request AdiLhan1/docapp!6
+
+[33mcommit 3bbf34521d4c2e746742d1a88fc7b97cdddd435e[m
+Author: Amal Nuritdinkhodzhaev <dev.justamal@gmail.com>
+Date:   Tue Sep 27 12:45:14 2022 +0000
+
+    Добавлены экраны профиля
+
+[33mcommit 8a4a584496226ac9a59d7382d7acec9dde0196bb[m
+Merge: 90c4af3 b547305
+Author: AdiLhan1 <kelsinbekovadilhan2018@gmail.com>
+Date:   Tue Sep 27 14:57:52 2022 +0600
+
+    Merge branch 'tools_screen_amal' of https://gitlab.com/AdiLhan1/docapp
+    
+     Conflicts:
+    	.idea/gradle.xml
+    	app/src/main/java/com/geektech/testapp/activity/MainActivity.kt
+    	app/src/main/java/com/geektech/testapp/fragments/RegionFragment.kt
+    	app/src/main/java/com/geektech/testapp/fragments/SplashScreenFragment.kt
+    	app/src/main/res/layout/fragment_forgot_password.xml
+    	app/src/main/res/layout/fragment_login.xml
+    	app/src/main/res/layout/fragment_region.xml
+    	app/src/main/res/layout/fragment_verify_identity.xml
+    	app/src/main/res/layout/region_bottom_sheet.xml
+    	app/src/main/res/navigation/nav_graph.xml
+    	app/src/main/res/values/strings.xml
+
+[33mcommit 90c4af37936bba48813a05dc517edd91b3d59547[m
+Author: AdiLhan1 <kelsinbekovadilhan2018@gmail.com>
+Date:   Tue Sep 27 14:56:24 2022 +0600
+
+    fda
+
+[33mcommit b54730512158a6bf09af92e97fcaaec1f1ee2c5c[m
+Author: Just_Amalll <amalkrasavchik@gmail.com>
+Date:   Tue Sep 27 14:40:28 2022 +0600
+
+    Added tool screen and fixed bugs with registration
+
+[33mcommit 64005d29365cefcd169ca20afcfeca5de0200007[m
+Author: Just_Amalll <amalkrasavchik@gmail.com>
+Date:   Tue Sep 27 14:33:48 2022 +0600
+
+    Added tool screen and fixed bugs with registration
+
+[33mcommit dcc6b9df328e0966945a78c952319f354e74abe2[m
+Author: User <theddy.kg@gmail.com>
+Date:   Tue Sep 27 11:43:20 2022 +0600
+
+    There is no Search Data screen Ready as item View
+
+[33mcommit 82fbf384a40b2d23d06aaf40c11d95685fb4fc42[m
+Author: User <theddy.kg@gmail.com>
+Date:   Tue Sep 27 02:21:07 2022 +0600
+
+    two screens and items to recyclerViews
+
+[33mcommit 3f540bbfcbccda9e696427dc9548211abc807bcf[m
+Author: coddingp <theodore1seriakov@gmail.com>
+Date:   Mon Sep 26 18:14:55 2022 +0600
+
+    first screen - first commit
+
+[33mcommit e7f76e0a1694e581db982350837288318f6666d8[m
+Merge: cff1bd8 f5d5a83
+Author: AdiLhan1 <kelsinbekovadilhan2018@gmail.com>
+Date:   Mon Sep 26 09:07:04 2022 +0000
+
+    Merge branch 'registration' into 'main'
+    
+    Добавил экраны регистрации
+    
+    See merge request AdiLhan1/docapp!2
+
+[33mcommit f5d5a83bef79094c73a5d8a97063246163c854c6[m
+Author: Amal Nuritdinkhodzhaev <dev.justamal@gmail.com>
+Date:   Mon Sep 26 09:07:03 2022 +0000
+
+    Добавил экраны регистрации
+
+[33mcommit c8b2053fe635041af61e4c2792752b52373e903d[m
+Author: Just_Amalll <amalkrasavchik@gmail.com>
+Date:   Mon Sep 26 14:13:16 2022 +0600
+
+    Registration Added
+
+[33mcommit cff1bd867b25e99b8e9f8526d0d6d7af17fe6dc8[m
+Merge: 7427a0b 8baf482
+Author: AdiLhan1 <kelsinbekovadilhan2018@gmail.com>
+Date:   Wed Sep 21 12:24:09 2022 +0000
+
+    Merge branch 'master' into 'main'
+    
+    updated
+    
+    See merge request AdiLhan1/docapp!1
+
+[33mcommit 7427a0b92dcd345e9f085c35ffff18c33a5b627b[m
+Author: AdiLhan1 <kelsinbekovadilhan2018@gmail.com>
+Date:   Wed Sep 21 12:22:30 2022 +0000
+
+    Initial commit
+
+[33mcommit 8baf482ee3e22eb1d559df3ad053497e0332856b[m
+Author: AdiLhan1 <kelsinbekovadilhan2018@gmail.com>
+Date:   Wed Sep 21 18:21:45 2022 +0600
+
+    updated

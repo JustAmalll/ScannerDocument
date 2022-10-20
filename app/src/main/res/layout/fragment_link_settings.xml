@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_corners"
+    android:orientation="vertical"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_in_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_header"
+            style="@style/topBarHeaderBlue"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/tv_settings"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_seven_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/days_7_works"
+            android:textColor="@color/text_color"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_header" />
+
+        <RadioButton
+            android:id="@+id/radio_seven_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="16dp"
+            android:buttonTint="@color/primary"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_seven_days"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_seven_days" />
+
+        <TextView
+            android:id="@+id/tv_30_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/_30_days"
+            android:textColor="@color/text_color"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_seven_days" />
+
+        <RadioButton
+            android:id="@+id/radio_30_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="16dp"
+            android:buttonTint="@color/primary"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_30_days"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_30_days" />
+
+        <TextView
+            android:id="@+id/tv_365_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/_365_days"
+            android:textColor="@color/text_color"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_30_days" />
+
+        <RadioButton
+            android:id="@+id/radio_365_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="16dp"
+            android:buttonTint="@color/primary"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_365_days"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_365_days" />
+
+        <TextView
+            android:id="@+id/tv_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/validation_code"
+            android:textColor="@color/text_color"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_365_days" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="16dp"
+            android:theme="@style/SwitchTheme"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_code"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_code" />
+
+        <TextView
+            android:id="@+id/tv_after_activation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginVertical="16dp"
+            android:paddingHorizontal="18dp"
+            android:text="@string/after_activation"
+            android:textColor="@color/light_grey"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_code" />
+
+        <TextView
+            android:id="@+id/tv_access_limitation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            android:alpha="0.4"
+            android:paddingHorizontal="18dp"
+            android:text="@string/restriction"
+            android:textColor="@color/light_grey"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_after_activation" />
+
+        <FrameLayout
+            android:id="@+id/f_blank"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:backgroundTint="@color/white"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

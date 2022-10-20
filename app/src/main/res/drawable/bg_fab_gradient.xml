@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:angle="45"
+                android:endColor="#B4E1FF"
+                android:startColor="#36A1EA" />
+        </shape>
+    </item>
+    <item
+        android:width="32dp"
+        android:height="32dp"
+        android:drawable="@drawable/ic_scan_white"
+        android:gravity="center" />
+
+</layer-list>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/blue_back_arrow_icon"
+        android:src="@drawable/ic_arrow_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/long_image_date"
+        android:textColor="@color/text_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/back_button"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
+        app:layout_constraintTop_toTopOf="@+id/back_button" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bt_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/primary"
+        android:text="@string/share"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_save" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tv_water_mark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_save">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/whitish"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:id="@+id/iv_big_magnifier"
+                android:layout_width="300dp"
+                android:layout_height="320dp"
+                android:layout_gravity="center"
+                android:layout_margin="32dp"
+                android:contentDescription="@string/big_blue_magnifier_image"
+                android:src="@drawable/image_big_for_water_mark" />
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-8dp"
+            android:contentDescription="@string/scanned_with_scanner_document_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_water_mark_blue" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_water_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        android:text="@string/bottom_water_mark"
+        android:textColor="@color/text_color"
+        android:textSize="16sp"
+        app:drawableRightCompat="@drawable/ic_premium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        style="@style/SwitchTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:checked="true"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_water_mark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_water_mark" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

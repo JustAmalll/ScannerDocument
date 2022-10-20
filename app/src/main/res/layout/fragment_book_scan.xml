@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#46506B"
+    android:orientation="vertical"
+    tools:context=".fragments.BookScanFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/dark_blue"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/auto_flash_icon"
+                android:rotation="90"
+                android:src="@drawable/ic_auto_flash" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/a_b_icon"
+                android:src="@drawable/ic_a_b" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/hd_icon"
+                android:rotation="90"
+                android:src="@drawable/ic_hd" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/more_icon"
+                android:rotation="90"
+                android:src="@drawable/ic_more"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="18dp"
+            android:contentDescription="@string/icon_premium"
+            android:src="@drawable/ic_premium" />
+
+        <LinearLayout
+            android:layout_width="316dp"
+            android:layout_height="420dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="60dp"
+            android:paddingBottom="50dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/book_scan_icon"
+                android:src="@drawable/ic_book_scan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:text="@string/book_scan"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/book_scan_subtitle"
+                android:textColor="@color/light_grey"
+                android:textSize="14sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/startButton"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:minWidth="230dp"
+                android:text="@string/start"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:cornerRadius="8dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView">
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/image_placeholder"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="70dp"
+                android:contentDescription="@string/a_icon"
+                android:src="@drawable/ic_a" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/dotted_line" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:contentDescription="@string/b_icon"
+                android:src="@drawable/ic_b" />
+
+        </LinearLayout>
+
+        <!--            <TextView-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:alpha="0.6"-->
+        <!--                android:background="@drawable/small_text_bg"-->
+        <!--                android:backgroundTint="@color/black"-->
+        <!--                android:rotation="90"-->
+        <!--                android:gravity="center"-->
+        <!--                android:paddingHorizontal="12dp"-->
+        <!--                android:text="Выровняйте лев./прав. страницы с областями А/В"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                app:layout_constraintBottom_toBottomOf="@+id/linearLayout6"-->
+        <!--                app:layout_constraintEnd_toEndOf="parent"-->
+        <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_blue"
+        android:orientation="vertical"
+        android:paddingBottom="54dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#1A2748">
+
+                    <TextView
+                        android:id="@+id/pptTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/ppt"
+                        android:textColor="#8D9CA5" />
+
+                    <TextView
+                        android:id="@+id/photoOnIdTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/photo_on_id"
+                        android:textColor="#8D9CA5" />
+
+                    <TextView
+                        android:id="@+id/textRecognitionTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/text_recognition"
+                        android:textColor="#8D9CA5" />
+
+                    <TextView
+                        android:id="@+id/photoToWordTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/photo_to_word"
+                        android:textColor="#8D9CA5" />
+
+                    <TextView
+                        android:id="@+id/documentsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/documents"
+                        android:textColor="#8D9CA5" />
+
+                    <TextView
+                        android:id="@+id/idDocumentTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/id_document"
+                        android:textColor="#8D9CA5" />
+
+                    <TextView
+                        android:id="@+id/questionnaire_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/questionnaire"
+                        android:textColor="#8D9CA5" />
+
+                    <TextView
+                        android:id="@+id/improvedPortraitTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/improved_portrait_text"
+                        android:textColor="#8D9CA5" />
+
+                    <TextView
+                        android:id="@+id/bookTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/photo_menu_tv_bg_style"
+                        android:text="@string/book"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/moreTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="40dp"
+                        android:text="@string/more"
+                        android:textColor="#8D9CA5" />
+
+                </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:id="@+id/makePhotoLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_blue"
+            android:gravity="center"
+            android:paddingStart="16dp"
+            android:paddingTop="28dp"
+            android:paddingEnd="16dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@+id/materialCardView">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/makePhotoButton"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/card_button_gradient"
+                app:cardCornerRadius="60dp">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/card_button_gradient" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:rotation="90"
+                    android:src="@drawable/ic_camera"
+                    android:contentDescription="@string/camera_icon" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

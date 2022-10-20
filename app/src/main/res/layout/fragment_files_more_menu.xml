@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_corners"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_in_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_sheet_corners"
+        android:paddingVertical="16dp">
+
+        <ImageView
+            android:id="@+id/iv_block"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:contentDescription="@string/lock_image"
+            android:src="@drawable/ic_lock"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_block"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/block"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_block"
+            app:layout_constraintStart_toEndOf="@+id/iv_block"
+            app:layout_constraintTop_toTopOf="@+id/iv_block" />
+
+        <ImageView
+            android:id="@+id/iv_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:contentDescription="@string/tag_image"
+            android:src="@drawable/ic_tag"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_block" />
+
+        <TextView
+            android:id="@+id/tv_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/tags"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_tag"
+            app:layout_constraintStart_toEndOf="@+id/iv_tag"
+            app:layout_constraintTop_toTopOf="@+id/iv_tag" />
+
+        <ImageView
+            android:id="@+id/iv_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:contentDescription="@string/cloud_with_an_arrow_up_forwarded"
+            android:src="@drawable/ic_download"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_tag" />
+
+        <TextView
+            android:id="@+id/tv_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/download"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_download"
+            app:layout_constraintStart_toEndOf="@+id/iv_download"
+            app:layout_constraintTop_toTopOf="@+id/iv_download" />
+
+        <ImageView
+            android:id="@+id/iv_save_to_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:contentDescription="@string/mountains_with_an_arrow_down_forwarded"
+            android:src="@drawable/ic_save_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_download"
+            app:tint="@color/light_grey" />
+
+        <TextView
+            android:id="@+id/tv_save_to_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/save_to_gallery"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_save_to_gallery"
+            app:layout_constraintStart_toEndOf="@+id/iv_save_to_gallery"
+            app:layout_constraintTop_toTopOf="@id/iv_save_to_gallery" />
+
+        <ImageView
+            android:id="@+id/iv_desk_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:contentDescription="@string/add_to_screen_schematic_image"
+            android:src="@drawable/ic_add_to_desktop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_save_to_gallery" />
+
+        <TextView
+            android:id="@+id/tv_desk_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/desktop"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_desk_top"
+            app:layout_constraintStart_toEndOf="@+id/iv_desk_top"
+            app:layout_constraintTop_toTopOf="@id/iv_desk_top" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

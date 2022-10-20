@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/image_placeholder"
+    android:orientation="vertical"
+    tools:context=".fragments.DocumentFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/smallToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#1A2748"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/flashButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/auto_flash_icon"
+                android:src="@drawable/ic_auto_flash" />
+
+            <ImageView
+                android:id="@+id/hdButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/hd_icon"
+                android:src="@drawable/ic_hd" />
+
+            <ImageView
+                android:id="@+id/icSoundOn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/icon_auto_smart_phone"
+                android:src="@drawable/ic_sound_on" />
+
+            <ImageView
+                android:id="@+id/smallToolBarMoreIcon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/more_icon"
+                android:src="@drawable/ic_more"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/toolBarMore"
+        style="@style/CustomCardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:visibility="gone"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#1A2748"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginBottom="20dp"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/icon_net"
+                    android:src="@drawable/ic_net" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/net"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/icon_net"
+                    android:src="@drawable/ic_level" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/level"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/autoRotateIcon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:contentDescription="@string/icon_net"
+                    android:src="@drawable/ic_auto_smartphone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/auto_rotate"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/shutterIcon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:contentDescription="@string/icon_level"
+                    android:src="@drawable/ic_auto_shutter" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/auto_shutter"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_blue"
+        android:orientation="vertical"
+        android:paddingBottom="54dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#1A2748">
+
+                <TextView
+                    android:id="@+id/pptTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/ppt"
+                    android:textColor="#8D9CA5" />
+
+                <TextView
+                    android:id="@+id/photoOnIdTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/photo_on_id"
+                    android:textColor="#8D9CA5" />
+
+                <TextView
+                    android:id="@+id/textRecognitionTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/text_recognition"
+                    android:textColor="#8D9CA5" />
+
+                <TextView
+                    android:id="@+id/photoToWordTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/photo_to_word"
+                    android:textColor="#8D9CA5" />
+
+                <TextView
+                    android:id="@+id/DocumentsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/photo_menu_tv_bg_style"
+                    android:text="@string/documents"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/idDocumentTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/id_document"
+                    android:textColor="#8D9CA5" />
+
+                <TextView
+                    android:id="@+id/questionnaire_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/questionnaire"
+                    android:textColor="#8D9CA5" />
+
+                <TextView
+                    android:id="@+id/improvedPortraitTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/improved_portrait_text"
+                    android:textColor="#8D9CA5" />
+
+                <TextView
+                    android:id="@+id/bookTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/book"
+                    android:textColor="#8D9CA5" />
+
+                <TextView
+                    android:id="@+id/moreTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="40dp"
+                    android:text="@string/more"
+                    android:textColor="#8D9CA5" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_blue"
+            android:gravity="center|start"
+            android:paddingStart="16dp"
+            android:paddingTop="46dp"
+            android:paddingEnd="16dp"
+            app:layout_constraintTop_toTopOf="@+id/materialCardView">
+
+            <LinearLayout
+                android:id="@+id/import_files_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/icon_import_file"
+                    android:src="@drawable/ic_file_upload" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="@string/import_files"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/importPicturesButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:contentDescription="@string/icon_picture"
+                    android:src="@drawable/ic_picture"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/import_text"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/card_button_gradient"
+                app:cardCornerRadius="60dp">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/card_button_gradient" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/camera_icon"
+                    android:src="@drawable/ic_camera" />
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/batchModeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/icon_batch_mode"
+                    android:src="@drawable/ic_layer_group" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="@string/batch_mode"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

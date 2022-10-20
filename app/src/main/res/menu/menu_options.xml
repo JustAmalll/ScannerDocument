@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/shareFileFragment"
+        android:icon="@drawable/ic_share"
+        android:title="@string/to_be_share" />
+
+    <item
+        android:id="@+id/moveToOrCopyBottomSheet"
+        android:icon="@drawable/ic_copy"
+        android:title="@string/move_to" />
+
+    <item
+        android:id="@+id/mergeFilesFragment"
+        android:icon="@drawable/ic_merge"
+        android:title="@string/merge" />
+
+    <item
+        android:id="@+id/deleteDialogFragment"
+        android:icon="@drawable/ic_trash"
+        app:iconTint="@color/dark_blue"
+        android:title="@string/delete" />
+
+    <item
+        android:id="@+id/moreBottomSheetDialogFragment"
+        android:icon="@drawable/ic_more"
+        app:iconTint="@color/dark_blue"
+        android:title="@string/more" />
+
+</menu>

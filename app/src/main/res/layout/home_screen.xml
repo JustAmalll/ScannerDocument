@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/bg_color">
+        android:background="@color/whitish">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/bg_color"
+            android:background="@color/whitish"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -34,6 +35,7 @@
                 android:gravity="center">
 
                 <ImageView
+                    android:id="@+id/searchButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="12dp"
@@ -41,6 +43,7 @@
                     android:src="@drawable/ic_search" />
 
                 <ImageView
+                    android:id="@+id/premiumButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/icon_premium"
@@ -58,7 +61,8 @@
             android:layout_marginTop="16dp"
             android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:ignore="UseCompoundDrawables">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -106,9 +110,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/info_text"
-                android:textColor="@color/light_gray" />
+                android:textColor="@color/light_grey" />
 
             <TextView
+                android:id="@+id/moreSpaceButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
@@ -135,14 +140,17 @@
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/infoLinearLayout">
+            app:layout_constraintTop_toBottomOf="@+id/infoLinearLayout"
+            android:baselineAligned="false">
 
             <LinearLayout
+                android:id="@+id/smartScanButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -161,11 +169,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/pdfToolsButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -184,11 +194,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/importPicturesButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -207,11 +219,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/importFilesButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -228,6 +242,7 @@
                     android:textSize="12sp" />
 
             </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -240,14 +255,17 @@
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            android:baselineAligned="false">
 
             <LinearLayout
+                android:id="@+id/scanIdDocumentButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -266,11 +284,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/imageToTextButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -289,11 +309,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/improvedPortraitButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -312,11 +334,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/allButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -333,6 +357,7 @@
                     android:textSize="12sp" />
 
             </LinearLayout>
+
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
@@ -348,6 +373,7 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
             <LinearLayout
+                android:id="@+id/documentLL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -372,7 +398,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:cardCornerRadius="16dp"
-                        app:strokeColor="@color/light_gray"
+                        app:strokeColor="@color/light_grey"
                         app:strokeWidth="1dp">
 
                         <ImageView
@@ -392,7 +418,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/titile"
+                            android:text="@string/title"
                             android:textColor="@color/text_color"
                             android:textSize="14sp" />
 
@@ -401,7 +427,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="@string/date"
-                            android:textColor="@color/light_gray"
+                            android:textColor="@color/light_grey"
                             android:textSize="12sp" />
 
                         <LinearLayout
@@ -439,7 +465,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="7dp"
-                            android:gravity="center">
+                            android:gravity="center"
+                            tools:ignore="UseCompoundDrawables">
 
                             <ImageView
                                 android:layout_width="14dp"
@@ -452,7 +479,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="5dp"
                                 android:text="@string/_24"
-                                android:textColor="@color/light_gray"
+                                android:textColor="@color/light_grey"
                                 android:textSize="12sp" />
 
                         </LinearLayout>
@@ -471,7 +498,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:cardCornerRadius="16dp"
-                        app:strokeColor="@color/light_gray"
+                        app:strokeColor="@color/light_grey"
                         app:strokeWidth="1dp">
 
                         <ImageView
@@ -491,7 +518,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/titile"
+                            android:text="@string/title"
                             android:textColor="@color/text_color"
                             android:textSize="14sp" />
 
@@ -500,7 +527,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="@string/date"
-                            android:textColor="@color/light_gray"
+                            android:textColor="@color/light_grey"
                             android:textSize="12sp" />
 
                         <LinearLayout
@@ -532,14 +559,14 @@
                                 android:text="@string/ppt"
                                 android:textColor="@color/white" />
 
-
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="7dp"
-                            android:gravity="center">
+                            android:gravity="center"
+                            tools:ignore="UseCompoundDrawables">
 
                             <ImageView
                                 android:layout_width="14dp"
@@ -552,7 +579,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="5dp"
                                 android:text="@string/_24"
-                                android:textColor="@color/light_gray"
+                                android:textColor="@color/light_grey"
                                 android:textSize="12sp" />
 
                         </LinearLayout>
@@ -593,10 +620,9 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
                     android:contentDescription="@string/icon_file"
                     android:src="@drawable/ic_file" />
 
@@ -605,7 +631,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/empty_list_text"
-                    android:textColor="@color/light_gray" />
+                    android:textColor="@color/light_grey" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/scanButton"

@@ -8,9 +8,34 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="primary">#36A1EA</color>
-    <color name="bg_color">#F2F7FA</color>
+    <color name="light_grey">#8D9CA5</color>
+    <color name="dark_grey">#0D001C3D</color>
+    <color name="light_blue">#CAE5FD</color>
+    <color name="dark_button_white">#F3F4F6</color>
+    <color name="whitish">#F2F7FA</color>
+    <color name="backgroundFloat1">#B4E1FF</color>
 
+    <color name="dark_blue">#1A2748</color>
     <color name="text_color">#1A2748</color>
-    <color name="light_gray">#8D9CA5</color>
+    <color name="blueTheme">#232ADB</color>
+    <color name="primary">#36A1EA</color>
+
+    <color name="backgroundButton">#5A9EFF</color>
+    <color name="dark_blue_button">#203C48</color>
+    <color name="mik_blue">#4986CC</color>
+    <color name="imageAddSignaturePurple">#373EDF</color>
+    <color name="greenTheme">#32B810</color>
+    <color name="orangeTheme">#F09306</color>
+    <color name="redTheme">#EF1919</color>
+
+    <color name="red_text">#FA6364</color>
+    <color name="imageAddSignatureSimilar">#8F5E13</color>
+    <color name="imageAddSignatureBrown">#C9730F</color>
+    <color name="imageAddSignatureDarkYellow">#DABB19</color>
+    <color name="imageAddSignatureYellow">#FAFF16</color>
+    <color name="imageAddSignatureLightGreen">#83F25C</color>
+    <color name="imageAddSignatureLightBlue">#6BF3E3</color>
+    <color name="dark_white">#EEEEEE</color>
+
 </resources>
+

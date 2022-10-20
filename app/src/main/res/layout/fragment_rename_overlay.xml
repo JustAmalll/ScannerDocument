@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_corners"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <LinearLayout
+        android:id="@+id/ll_inner_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_sheet_corners"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_rename"
+            style="@style/topBarHeaderBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/rename" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:textColorHint="@color/light_grey"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxStrokeColor="@color/primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_close"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:hint="Название файла"
+                android:textColor="@color/text_color" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_bottom"
+            android:fitsSystemWindows="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/dark_grey"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/primary"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/renameButton"
+                app:layout_constraintEnd_toStartOf="@+id/renameButton"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/renameButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/primary"
+                android:text="@string/rename"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:cornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@+id/documentNameSettingRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom">
+
+            <TextView
+                android:id="@+id/tv_file_name_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/dark_grey"
+                android:text="@string/settings_for_document"
+                android:textAllCaps="false"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/primary"
+                android:contentDescription="@string/gear_image"
+                android:src="@drawable/ic_settings"
+                android:text="@string/rename"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

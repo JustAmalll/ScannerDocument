@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitish">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/clickBack"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
+            android:contentDescription="@string/todo"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_arrow_left"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25sp"
+            android:text="@string/signature_feature"
+            android:textColor="@color/text_color"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/clickBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_add_signature"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/constBottomNavigate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constToolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constBottomNavigate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_blue"
+        android:paddingBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constEditingSignature"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_touch"
+                    android:contentDescription="@string/small_circle_icon" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/slider"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:value="20"
+                    android:valueFrom="0"
+                    android:valueTo="100" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_touch"
+                    android:contentDescription="@string/big_circle_icon" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/dark_blue"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linSlider">
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="2.5dp"
+                    android:layout_marginEnd="2.5dp"
+                    android:background="@color/black" />
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="2.5dp"
+                    android:layout_marginEnd="2.5dp"
+                    android:background="@color/imageAddSignaturePurple" />
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="2.5dp"
+                    android:layout_marginEnd="2.5dp"
+                    android:background="@color/redTheme" />
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="2.5dp"
+                    android:layout_marginEnd="2.5dp"
+                    android:background="@color/white" />
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="2.5dp"
+                    android:layout_marginEnd="2.5dp"
+                    android:background="@color/imageAddSignatureSimilar" />
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="2.5dp"
+                    android:layout_marginEnd="2.5dp"
+                    android:background="@color/imageAddSignatureBrown" />
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="2.5dp"
+                    android:layout_marginEnd="2.5dp"
+                    android:background="@color/imageAddSignatureDarkYellow" />
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="2.5dp"
+                    android:layout_marginEnd="2.5dp"
+                    android:background="@color/imageAddSignatureYellow" />
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="2.5dp"
+                    android:layout_marginEnd="2.5dp"
+                    android:background="@color/imageAddSignatureLightGreen" />
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="2.5dp"
+                    android:layout_marginEnd="2.5dp"
+                    android:background="@color/greenTheme" />
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="2.5dp"
+                    android:layout_marginEnd="2.5dp"
+                    android:background="@color/imageAddSignatureLightBlue" />
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="2.5dp"
+                    android:layout_marginEnd="2.5dp"
+                    android:background="@color/blueTheme" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/dialog_page_number_backgrounds"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:text="@string/_1_65"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_add_signature"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

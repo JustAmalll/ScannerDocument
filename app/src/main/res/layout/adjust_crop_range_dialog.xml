@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="18dp">
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:minWidth="300dp"
+        android:text="Настроить диапазон обрезки"
+        android:textColor="@color/text_color"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/primary"
+            android:checked="true"
+            android:text="Настраивать изображение\nпосле каждого снимка"
+            android:textColor="@color/text_color" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/primary"
+            android:text="Использовать инструмент\nобрезки позже"
+            android:textColor="@color/text_color" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Вы также можете изменить эту опцию в\n“Настройки -> Сканирование”"
+        android:textColor="@color/light_grey"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/okTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="18dp"
+        android:text="Понятно"
+        android:textColor="@color/primary" />
+
+</LinearLayout>

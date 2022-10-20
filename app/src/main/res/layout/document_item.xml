@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/documentItemContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="10dp"
+    android:gravity="center">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:strokeColor="@color/light_grey"
+        app:strokeWidth="1dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/document_preview"
+            android:src="@drawable/image2" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/documentTypeCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="@color/primary"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="3dp"
+                android:text="Word"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/selected_bg"
+            android:layout_width="94dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:alpha="0.5"
+            android:background="@color/primary"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/selected_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_check_circle_white"
+            android:visibility="gone" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textColor="@color/text_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/date"
+            android:textColor="@color/light_grey"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_view_bg_style"
+                android:text="@string/note"
+                android:textSize="11sp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/text_view_bg_style"
+                android:text="@string/cutaway"
+                android:textSize="11sp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/text_view_bg_style"
+                android:text="@string/ppt"
+                android:textSize="11sp"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="16dp"
+                android:contentDescription="@string/icon_file"
+                android:src="@drawable/ic_file" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/_24"
+                android:textColor="@color/light_grey"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

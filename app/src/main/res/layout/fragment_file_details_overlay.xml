@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginHorizontal="8dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="16dp">
+
+        <LinearLayout
+            android:id="@+id/ll_inner_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_stamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="@string/big_blue_stamp"
+                android:src="@drawable/ic_blue_stamp" />
+
+            <LinearLayout
+                android:id="@+id/ll_main_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_buttons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:gravity="center"
+                    android:text="@string/stamp"
+                    android:textColor="@color/light_grey"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/shareButton"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:textSize="13sp"
+                    android:backgroundTint="@color/dark_grey"
+                    android:text="@string/share"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary"
+                    app:cornerRadius="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/deleteWaterMarkButton"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:textSize="13sp"
+                    android:backgroundTint="@color/mik_blue"
+                    android:drawableEnd="@drawable/ic_premium_small"
+                    android:text="@string/delete_stamp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:cornerRadius="8dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
