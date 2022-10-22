@@ -1,5 +1,6 @@
 package com.geektech.testapp.fragments
 
+import android.annotation.SuppressLint
 import androidx.navigation.fragment.findNavController
 import com.geektech.testapp.R
 import com.geektech.testapp.base.BaseEmptyFragment
@@ -12,6 +13,7 @@ class PageSizePdfFragment : BaseEmptyFragment<FragmentPageSizePdfBinding>(
 
     private lateinit var dialog: BottomSheetDialog
 
+    @SuppressLint("InflateParams")
     override fun setupClickListener() = with(binding) {
         clickBack.setOnClickListener {
             findNavController().popBackStack()

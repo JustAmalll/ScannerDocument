@@ -1,6 +1,7 @@
 package com.geektech.testapp.fragments
 
 import android.animation.ObjectAnimator
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.os.Bundle
 import android.os.Handler
@@ -14,12 +15,16 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.geektech.testapp.R
 import com.geektech.testapp.databinding.FragmentWordPageDocumentBinding
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class WordDocumentPageFragment : Fragment() {
 
     private var _binding: FragmentWordPageDocumentBinding? = null
     private val binding get() = _binding!!
 
+    private lateinit var dialog: BottomSheetDialog
+
+    @SuppressLint("InflateParams")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -51,6 +56,15 @@ class WordDocumentPageFragment : Fragment() {
 
         binding.backButton.setOnClickListener {
             findNavController().popBackStack()
+        }
+
+        binding.imgEdit.setOnClickListener {
+            val bottomSheetView = layoutInflater.inflate(
+                R.layout.rename_page_name_bottom_sheet, null
+            )
+            dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetDialogTheme)
+            dialog.setContentView(bottomSheetView)
+            dialog.show()
         }
 
         binding.pageDocumentsButton.setOnClickListener {

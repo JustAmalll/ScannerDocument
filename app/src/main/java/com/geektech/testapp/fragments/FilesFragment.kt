@@ -6,11 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.geektech.testapp.R
+import com.geektech.testapp.adapters.FoldersAdapter
 import com.geektech.testapp.adapters.SearchDocumentAdapter
 import com.geektech.testapp.databinding.FragmentFileBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -30,9 +33,48 @@ class FilesFragment : Fragment() {
     ): View {
         _binding = FragmentFileBinding.inflate(inflater, container, false)
 
+        val filesAdapter = FoldersAdapter()
+        val documentsAdapter = SearchDocumentAdapter()
+
         binding.searchDocumentRv.apply {
             layoutManager = LinearLayoutManager(requireContext())
-            adapter = SearchDocumentAdapter()
+            adapter = ConcatAdapter(filesAdapter, documentsAdapter)
+        }
+
+        filesAdapter.onItemClick = {
+            val dialogView = layoutInflater.inflate(R.layout.fragment_folders_more_menu, null)
+            dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetDialogTheme)
+            dialog.setContentView(dialogView)
+            dialog.findViewById<TextView>(R.id.addIconToDesktopButton)?.setOnClickListener {
+                dialog.hide()
+                Toast.makeText(
+                    requireContext(),
+                    "Добавить значок на рабочем столе",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+            dialog.findViewById<TextView>(R.id.moveToButton)?.setOnClickListener {
+                dialog.hide()
+                findNavController().navigate(R.id.action_filesFragment_to_moveFoldersFragment)
+            }
+            dialog.findViewById<TextView>(R.id.renameButton)?.setOnClickListener {
+                dialog.hide()
+                val renameDialogView = layoutInflater.inflate(
+                    R.layout.fragment_rename_overlay, null
+                )
+                dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetDialogTheme)
+                dialog.setContentView(renameDialogView)
+                dialog.show()
+            }
+            dialog.findViewById<TextView>(R.id.deleteButton)?.setOnClickListener {
+                dialog.hide()
+                Toast.makeText(
+                    requireContext(),
+                    "Папка успешно удалена!",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+            dialog.show()
         }
 
         binding.arrowDownIcon.setOnClickListener {

@@ -29,6 +29,10 @@ class ShareLinkFragment : Fragment() {
     ): View {
         _binding = FragmentShareLinkMethodsBinding.inflate(inflater, container, false)
 
+        if (findNavController().previousBackStackEntry?.destination?.id ==
+            R.id.separateDocumentFragment
+        ) showSendToPcDialog()
+
         binding.tvShareFile.setOnClickListener {
             findNavController().navigate(R.id.action_shareLinkFragment_to_shareFileFragment)
         }
@@ -41,21 +45,25 @@ class ShareLinkFragment : Fragment() {
         }
 
         binding.sendToPcIv.setOnClickListener {
-            Dialog(requireContext(), R.style.RoundedCornersDialog).apply {
-                requestWindowFeature(Window.FEATURE_NO_TITLE)
-                setCancelable(true)
-                setContentView(R.layout.dialog_send_to_pc)
-                this.findViewById<Button>(R.id.scanButton)?.setOnClickListener {
-                    hide()
-                    findNavController().navigate(
-                        R.id.action_shareLinkFragment_to_qrCodeScannerFragment
-                    )
-                }
-                show()
-            }
+            showSendToPcDialog()
         }
 
         return binding.root
+    }
+
+    private fun showSendToPcDialog() {
+        Dialog(requireContext(), R.style.RoundedCornersDialog).apply {
+            requestWindowFeature(Window.FEATURE_NO_TITLE)
+            setCancelable(true)
+            setContentView(R.layout.dialog_send_to_pc)
+            this.findViewById<Button>(R.id.scanButton)?.setOnClickListener {
+                hide()
+                findNavController().navigate(
+                    R.id.action_shareLinkFragment_to_qrCodeScannerFragment
+                )
+            }
+            show()
+        }
     }
 
     override fun onDestroyView() {

@@ -27,6 +27,13 @@ class DocumentFragment : Fragment() {
     ): View {
         _binding = FragmentDocumentBinding.inflate(inflater, container, false)
 
+        if (findNavController().previousBackStackEntry?.destination?.id ==
+            R.id.pageDocumentsFragment
+        ) {
+            binding.importFilesLl.visibility = View.INVISIBLE
+            binding.batchModeButton.visibility = View.INVISIBLE
+        }
+
         binding.importFilesLl.setOnClickListener {
             findNavController().navigate(R.id.action_documentFragment_to_importFileFragment)
         }

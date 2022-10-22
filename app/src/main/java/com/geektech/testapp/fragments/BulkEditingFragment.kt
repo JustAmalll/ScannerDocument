@@ -1,8 +1,11 @@
 package com.geektech.testapp.fragments
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.view.Window
+import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.geektech.testapp.R
@@ -17,6 +20,7 @@ class BulkEditingFragment : BaseEmptyFragment<FragmentBulkEditingBinding>(
 
     private lateinit var dialog: BottomSheetDialog
 
+    @SuppressLint("InflateParams")
     override fun setupClickListener() = with(binding) {
         backButton.setOnClickListener {
             findNavController().popBackStack()
@@ -30,6 +34,23 @@ class BulkEditingFragment : BaseEmptyFragment<FragmentBulkEditingBinding>(
         }
         emptySpace.setOnClickListener {
             findNavController().navigate(R.id.action_bulkEditingFragment_to_pageDocumentsFragment)
+        }
+        deleteButton.setOnClickListener {
+            Toast.makeText(
+                requireContext(),
+                "Успешно удалено!",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+        moveToButton.setOnClickListener {
+            findNavController().navigate(R.id.action_bulkEditingFragment_to_moveToFragment)
+        }
+        saveToGalleryButton.setOnClickListener {
+            Toast.makeText(
+                requireContext(),
+                "Успешно сохранено в галлерею!",
+                Toast.LENGTH_SHORT
+            ).show()
         }
         moreButton.setOnClickListener {
             val dialogView = layoutInflater.inflate(R.layout.sheet_editing_bulk, null)
@@ -49,6 +70,28 @@ class BulkEditingFragment : BaseEmptyFragment<FragmentBulkEditingBinding>(
                     }
                     show()
                 }
+            }
+            dialog.findViewById<TextView>(R.id.copyTv)?.setOnClickListener {
+                dialog.hide()
+                Toast.makeText(
+                    requireContext(),
+                    "Успешно скопировано!",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+            dialog.findViewById<TextView>(R.id.loadTextView)?.setOnClickListener {
+                dialog.hide()
+                Toast.makeText(
+                    requireContext(),
+                    "Загрузка",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+            dialog.findViewById<LinearLayout>(R.id.collageLL)?.setOnClickListener {
+                dialog.hide()
+                findNavController().navigate(
+                    R.id.action_bulkEditingFragment_to_bulkCollageFragment
+                )
             }
             dialog.show()
         }

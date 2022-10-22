@@ -209,6 +209,9 @@
             android:id="@+id/action_filesFragment_to_tagsFragment"
             app:destination="@id/tagsFragment" />
         <action
+            android:id="@+id/action_filesFragment_to_separateDocumentFragment"
+            app:destination="@id/separateDocumentFragment" />
+        <action
             android:id="@+id/action_filesFragment_to_pageDocumentsFragment"
             app:destination="@id/pageDocumentsFragment" />
         <action
@@ -1136,11 +1139,17 @@
             android:id="@+id/action_bulkEditingFragment_to_batchImageProgressingFragment"
             app:destination="@id/batchImageProgressingFragment" />
         <action
+            android:id="@+id/action_bulkEditingFragment_to_bulkCollageFragment"
+            app:destination="@id/bulkCollageFragment" />
+        <action
             android:id="@+id/action_bulkEditingFragment_to_shareFileFragment"
             app:destination="@id/shareFileFragment" />
         <action
             android:id="@+id/action_bulkEditingFragment_to_pageDocumentsFragment"
             app:destination="@id/pageDocumentsFragment" />
+        <action
+            android:id="@+id/action_bulkEditingFragment_to_moveToFragment"
+            app:destination="@id/moveToFragment" />
     </fragment>
     <fragment
         android:id="@+id/batchImageProgressingFragment"
@@ -1167,6 +1176,9 @@
         <action
             android:id="@+id/action_bulkCollageFragment_to_bulkSizeFragment"
             app:destination="@id/bulkSizeFragment" />
+        <action
+            android:id="@+id/action_bulkCollageFragment_to_separateDocumentPdfFragment"
+            app:destination="@id/separateDocumentPdfFragment" />
     </fragment>
     <fragment
         android:id="@+id/bulkSizeFragment"
@@ -1307,6 +1319,9 @@
         <action
             android:id="@+id/action_separateDocumentPdfFragment_to_optionPdfFragment"
             app:destination="@id/optionPdfFragment" />
+        <action
+            android:id="@+id/action_separateDocumentPdfFragment_to_wordDocumentPageFragment"
+            app:destination="@id/wordDocumentPageFragment" />
     </fragment>
     <fragment
         android:id="@+id/selectFileForWaterMarkFragment"
@@ -1321,14 +1336,32 @@
         android:name="com.geektech.testapp.fragments.SeparateDocumentFragment"
         android:label="SeparateDocumentFragment">
         <action
-            android:id="@+id/action_separateDocumentFragment_to_separateDocumentPdfFragment"
-            app:destination="@id/separateDocumentPdfFragment" />
+            android:id="@+id/action_separateDocumentFragment_to_shareLinkFragment"
+            app:destination="@id/shareLinkFragment" />
         <action
             android:id="@+id/action_separateDocumentFragment_to_shareFileFragment"
             app:destination="@id/shareFileFragment" />
         <action
             android:id="@+id/action_separateDocumentFragment_to_bulkEditingFragment"
             app:destination="@id/bulkEditingFragment" />
+        <action
+            android:id="@+id/action_separateDocumentFragment_to_ocrFragment"
+            app:destination="@id/ocrFragment" />
+        <action
+            android:id="@+id/action_separateDocumentFragment_to_optionPdfFragment"
+            app:destination="@id/optionPdfFragment" />
+        <action
+            android:id="@+id/action_separateDocumentFragment_to_selectFileFragment"
+            app:destination="@id/selectFileFragment" />
+        <action
+            android:id="@+id/action_separateDocumentFragment_to_bulkCollageFragment"
+            app:destination="@id/bulkCollageFragment" />
+        <action
+            android:id="@+id/action_separateDocumentFragment_to_separateDocumentPdfFragment"
+            app:destination="@id/separateDocumentPdfFragment" />
+        <action
+            android:id="@+id/action_separateDocumentFragment_to_wordDocumentPageFragment"
+            app:destination="@id/wordDocumentPageFragment" />
     </fragment>
     <fragment
         android:id="@+id/optionPdfFragment"

@@ -17,8 +17,24 @@ class SeparateDocumentPdfFragment : BaseEmptyFragment<FragmentSeparateDocumentPd
 
     @SuppressLint("InflateParams")
     override fun setupClickListener() = with(binding) {
+
+        if (
+            findNavController().previousBackStackEntry?.destination?.id ==
+            R.id.bulkCollageFragment
+        ) showAddWaterMarkBottomSheet()
+
         clickBack.setOnClickListener {
             findNavController().popBackStack()
+        }
+        editButton.setOnClickListener {
+            val renameDialogView = layoutInflater.inflate(
+                R.layout.rename_page_name_bottom_sheet, null
+            )
+            dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetDialogTheme)
+            dialog.apply {
+                setContentView(renameDialogView)
+                show()
+            }
         }
         shareButton.setOnClickListener {
             findNavController().navigate(
@@ -31,16 +47,7 @@ class SeparateDocumentPdfFragment : BaseEmptyFragment<FragmentSeparateDocumentPd
             )
         }
         addWaterMarkButton.setOnClickListener {
-            val dialogView = layoutInflater.inflate(R.layout.sheet_add_watermark, null)
-            dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetDialogTheme)
-            dialog.setContentView(dialogView)
-            dialog.findViewById<TextView>(R.id.cancelButton)?.setOnClickListener {
-                dialog.hide()
-            }
-            dialog.findViewById<Button>(R.id.btnAdd)?.setOnClickListener {
-                dialog.hide()
-            }
-            dialog.show()
+            showAddWaterMarkBottomSheet()
         }
         pdfSettings.setOnClickListener {
             findNavController().navigate(
@@ -55,8 +62,24 @@ class SeparateDocumentPdfFragment : BaseEmptyFragment<FragmentSeparateDocumentPd
         }
         convertToWordButton.setOnClickListener {
             findNavController().navigate(
-                R.id.action_separateDocumentPdfFragment_to_shareFileFragment
+                R.id.action_separateDocumentPdfFragment_to_wordDocumentPageFragment
             )
+        }
+    }
+
+    @SuppressLint("InflateParams")
+    private fun showAddWaterMarkBottomSheet() {
+        val dialogView = layoutInflater.inflate(R.layout.sheet_add_watermark, null)
+        dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetDialogTheme)
+        dialog.apply {
+            setContentView(dialogView)
+            findViewById<TextView>(R.id.cancelButton)?.setOnClickListener {
+                hide()
+            }
+            findViewById<Button>(R.id.btnAdd)?.setOnClickListener {
+                hide()
+            }
+            show()
         }
     }
 }

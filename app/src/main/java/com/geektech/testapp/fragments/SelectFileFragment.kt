@@ -1,5 +1,6 @@
 package com.geektech.testapp.fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -19,6 +20,7 @@ class SelectFileFragment : Fragment() {
 
     private lateinit var dialog: BottomSheetDialog
 
+    @SuppressLint("InflateParams")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

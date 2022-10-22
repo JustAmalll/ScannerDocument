@@ -1,5 +1,6 @@
 package com.geektech.testapp.fragments
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -20,6 +21,7 @@ class SynchronizeFragment : Fragment() {
 
     private lateinit var dialog: BottomSheetDialog
 
+    @SuppressLint("InflateParams")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

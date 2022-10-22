@@ -76,10 +76,11 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_add_signature"
+        android:id="@+id/addSignatureRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
+        tools:listitem="@layout/item_add_signature"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/constBottomNavigate"
         app:layout_constraintEnd_toEndOf="parent"

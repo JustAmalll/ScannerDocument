@@ -28,6 +28,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25sp"
@@ -40,38 +41,26 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imgFile"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="18dp"
-            android:contentDescription="@string/todo"
-            android:src="@drawable/ic_pdf_file"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/shareButton"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/editButton"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/icon_edit"
+            android:src="@drawable/ic_pencil"
+            app:layout_constraintBottom_toBottomOf="@+id/textView7"
+            app:layout_constraintStart_toEndOf="@+id/textView7"
+            app:layout_constraintTop_toTopOf="@+id/textView7" />
 
         <ImageView
             android:id="@+id/shareButton"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
             android:contentDescription="@string/todo"
             android:src="@drawable/ic_share"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imgMore"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imgMore"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="18dp"
-            android:contentDescription="@string/more_icon"
-            android:src="@drawable/ic_more"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/dark_blue" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -83,6 +72,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:elevation="10dp"
+        app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="15dp"
         app:cardElevation="10dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout14"
@@ -120,28 +110,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/materialButton"
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        android:layout_height="34dp"
+                        android:textColor="@color/white"
                         android:layout_marginEnd="5dp"
+                        android:backgroundTint="@color/backgroundButton"
+                        android:text="@string/remove_water_mark"
+                        android:textAllCaps="false"
+                        android:textSize="8sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/imageView1"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/materialButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/backgroundButton"
-                            android:text="Убрать водяной знак"
-                            android:textAllCaps="false"
-                            android:textSize="10sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SmallSp" />
 
                     <ImageView
                         android:id="@+id/imageView1"

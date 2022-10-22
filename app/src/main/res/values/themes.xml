@@ -40,7 +40,7 @@
         <!-- inactive track color (30% transparency) -->
         <item name="android:colorForeground">#42221f1f</item>
 
-        <item name="switchMinWidth">58dp</item>
+        <item name="switchMinWidth">56dp</item>
     </style>
 
     <style name="CustomCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">

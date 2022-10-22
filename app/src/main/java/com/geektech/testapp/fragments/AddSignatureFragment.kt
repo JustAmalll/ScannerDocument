@@ -6,7 +6,9 @@ import android.view.Window
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.geektech.testapp.R
+import com.geektech.testapp.adapters.AddSignatureAdapter
 import com.geektech.testapp.base.BaseEmptyFragment
 import com.geektech.testapp.databinding.FragmentAddSignatureBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -26,6 +28,10 @@ class AddSignatureFragment : BaseEmptyFragment<FragmentAddSignatureBinding>(
                 setContentView(R.layout.dialog_undo_edits)
                 show()
             }
+        }
+        addSignatureRecyclerView.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = AddSignatureAdapter()
         }
         linIdSignature.setOnClickListener {
             val dialogView = layoutInflater.inflate(R.layout.sheet_scan_import, null)

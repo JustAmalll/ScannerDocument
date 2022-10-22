@@ -1,6 +1,7 @@
 package com.geektech.testapp.fragments
 
 import android.animation.ObjectAnimator
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.os.Handler
 import android.os.Looper
@@ -20,6 +21,7 @@ class BatchImageProgressingFragment : BaseEmptyFragment<FragmentBatchImageProces
 
     private lateinit var dialog: BottomSheetDialog
 
+    @SuppressLint("InflateParams")
     override fun setupClickListener() = with(binding) {
         clickBack.setOnClickListener {
             findNavController().popBackStack()

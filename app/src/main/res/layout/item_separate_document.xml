@@ -4,8 +4,10 @@
     android:id="@+id/container"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="12dp"
-    android:elevation="10dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:elevation="4dp"
     app:cardCornerRadius="15dp"
     app:cardElevation="10dp"
     app:layout_constraintBottom_toBottomOf="parent"
@@ -19,7 +21,7 @@
 
         <ImageView
             android:id="@+id/img_separate_document"
-            android:layout_width="wrap_content"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:contentDescription="@string/todo"
             android:scaleType="centerCrop"

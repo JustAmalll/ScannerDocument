@@ -23,7 +23,7 @@ class SearchDocumentAdapter : RecyclerView.Adapter<SearchDocumentAdapter.MyViewH
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.binding.documentTypeCardView.visibility = View.GONE
         holder.binding.documentItemContainer.setOnClickListener {
-            it.findNavController().navigate(R.id.action_filesFragment_to_pageDocumentsFragment)
+            it.findNavController().navigate(R.id.action_filesFragment_to_separateDocumentFragment)
         }
         holder.binding.documentItemContainer.setOnLongClickListener {
             it.findNavController().navigate(R.id.action_filesFragment_to_moveFoldersFragment)

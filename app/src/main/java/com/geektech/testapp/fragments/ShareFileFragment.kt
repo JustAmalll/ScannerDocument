@@ -1,5 +1,6 @@
 package com.geektech.testapp.fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -18,6 +19,7 @@ class ShareFileFragment : Fragment() {
 
     private lateinit var dialog: BottomSheetDialog
 
+    @SuppressLint("InflateParams")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -37,14 +39,18 @@ class ShareFileFragment : Fragment() {
         dialog.show()
 
         binding.sharePdfTextView.setOnClickListener {
-            val minimizeSizeFragment = layoutInflater.inflate(R.layout.fragment_minimize_size, null)
+            val minimizeSizeFragment = layoutInflater.inflate(
+                R.layout.fragment_minimize_size, null
+            )
             dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetDialogTheme)
             dialog.setContentView(minimizeSizeFragment)
             dialog.show()
         }
 
         binding.shareWordTextView.setOnClickListener {
-            val fragmentShareWordDialog = layoutInflater.inflate(R.layout.fragment_share_word, null)
+            val fragmentShareWordDialog = layoutInflater.inflate(
+                R.layout.fragment_share_word, null
+            )
             dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetDialogTheme)
             dialog.setContentView(fragmentShareWordDialog)
             dialog.show()

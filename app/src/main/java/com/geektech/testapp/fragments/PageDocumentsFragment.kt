@@ -5,6 +5,7 @@ import android.app.Dialog
 import android.view.Window
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.geektech.testapp.R
 import com.geektech.testapp.base.BaseEmptyFragment
@@ -55,6 +56,26 @@ class PageDocumentsFragment : BaseEmptyFragment<FragmentPageDocumentsBinding>(
                 dialog.hide()
                 findNavController().navigate(R.id.action_pageDocumentsFragment_to_documentFragment)
             }
+            dialog.findViewById<LinearLayout>(R.id.saveToGalleryButton)?.setOnClickListener {
+                dialog.hide()
+                Toast.makeText(
+                    requireContext(),
+                    "Успешно сохранено в галерее!",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+            dialog.findViewById<LinearLayout>(R.id.editButton)?.setOnClickListener {
+                dialog.hide()
+                showRenameDialog()
+            }
+            dialog.findViewById<LinearLayout>(R.id.deleteButton)?.setOnClickListener {
+                dialog.hide()
+                Toast.makeText(
+                    requireContext(),
+                    "Файл успешно удален!",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
             dialog.show()
         }
         binding.addNoteButton.setOnClickListener {
@@ -83,10 +104,14 @@ class PageDocumentsFragment : BaseEmptyFragment<FragmentPageDocumentsBinding>(
             findNavController().navigate(R.id.action_pageDocumentsFragment_to_shareFileFragment)
         }
         editButton.setOnClickListener {
-            val bottomSheetView = layoutInflater.inflate(R.layout.rename_page_name, null)
-            dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetDialogTheme)
-            dialog.setContentView(bottomSheetView)
-            dialog.show()
+            showRenameDialog()
         }
+    }
+
+    private fun showRenameDialog() {
+        val bottomSheetView = layoutInflater.inflate(R.layout.rename_page_name_bottom_sheet, null)
+        dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetDialogTheme)
+        dialog.setContentView(bottomSheetView)
+        dialog.show()
     }
 }

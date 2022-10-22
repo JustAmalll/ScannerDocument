@@ -16,5 +16,10 @@ class BulkCollageFragment : BaseEmptyFragment<FragmentBulkCollageBinding>(
         sizeButton.setOnClickListener {
             findNavController().navigate(R.id.action_bulkCollageFragment_to_bulkSizeFragment)
         }
+        waterMarkButton.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_bulkCollageFragment_to_separateDocumentPdfFragment
+            )
+        }
     }
 }

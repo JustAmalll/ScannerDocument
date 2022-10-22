@@ -36,7 +36,8 @@
             android:drawableEnd="@drawable/ic_close"
             android:fontFamily="@font/sf_pro_display_regular"
             android:hint="Введите новый адрес электронной почты"
-            android:textColor="@color/text_color" />
+            android:textColor="@color/text_color"
+            app:endIconMode="clear_text" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -59,8 +60,8 @@
             android:layout_marginStart="18dp"
             android:backgroundTint="@color/primary"
             android:text="Изменить"
-            android:textColor="@color/white"
             android:textAllCaps="false"
+            android:textColor="@color/white"
             app:cornerRadius="8dp" />
 
     </LinearLayout>
